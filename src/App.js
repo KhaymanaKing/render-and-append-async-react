@@ -4,6 +4,7 @@ import BearList from './BearList';
 import CandiesList from './CandiesList';
 import SpiderList from './SpiderList';
 import CartoonList from './CartoonList';
+import Loading from './Loading';
 import './App.css'; 
 
 function App() {
@@ -11,13 +12,15 @@ function App() {
   const [candies, setCandies] = useState([]);
   const [spiders, setSpiders] = useState([]);
   const [cartoons, setCartoons] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(async () => {
+    setIsLoading(true);
     const bearResponse = await getBears();
     const candyResponse = await getCandies();
     const spiderResponse = await getSpiders();
     const cartoonRespone = await getCartoons();
-
+    setIsLoading(false);
     setBears(bearResponse);
     setCandies(candyResponse);
     setSpiders(spiderResponse);
@@ -26,22 +29,16 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <h1>Bears</h1>
-        <BearList bears={bears}/>
-      </div>
-      <div>
-        <h1>Candy</h1>
-        <CandiesList candies={candies}/>
-      </div>
-      <div>
-        <h1>Spiders</h1>
-        <SpiderList spiders={spiders}/>
-      </div>
-      <div>
-        <h1>Cartoons</h1>
-        <CartoonList cartoons={cartoons}/>
-      </div>
+      {
+        isLoading ? <Loading/>
+          : <><h1>Bears</h1><BearList bears={bears} />
+            <h1>Candy</h1>
+            <CandiesList candies={candies} />
+            <h1>Spiders</h1>
+            <SpiderList spiders={spiders} />
+            <h1>Cartoons</h1>
+            <CartoonList cartoons={cartoons} /></>
+      }
     </div>
   );
 }

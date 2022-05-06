@@ -1,6 +1,13 @@
 .App {
   text-align: center;
+  background-image: url('https://imgs.search.brave.com/qgWw5Bn-sMpaSmXkrqY68pv0bhRhYpkMST6cXlFiSV4/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/Z29vZGZyZWVwaG90/b3MuY29tL2FsYnVt/cy9ib2xpdmlhL290/aGVyLWJvbGl2aWEv/bW91bnRhaW5zLWFu/ZC1sYWtlLWxhbmRz/Y2FwZS1zY2VuaWMu/anBn');
+  background-repeat: no-repeat;
+  background-size: 140vh;
+  scroll-behavior: fixed;
+  background-position: center;
+  background-attachment: fixed;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -13,34 +20,18 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 
 .bear-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content:center;
   margin: 20px;
 }
 .bear {
@@ -49,12 +40,12 @@
   margin: 10px;
   justify-content: space-around;
   width: 200px;
-  
+  backdrop-filter: saturate(180%) blur(20px);
 }
 .candy-list{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin: 20px;
 }
 
@@ -64,12 +55,12 @@
   margin: 10px;
   justify-content: space-around;
   width: 200px;
-
+  backdrop-filter: saturate(180%) blur(20px);
 }
 .spider-list{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin: 20px;
 }
 .spider{
@@ -78,9 +69,30 @@
   margin: 10px;
   justify-content: space-around;
   width: 200px;
+  backdrop-filter: saturate(180%) blur(20px);
 }
 
 .spider img{
   width: 100px;
   height: 100px;
 }
+
+.cartoon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+.cartoon {  
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  justify-content: space-around;
+  width: 200px;
+  backdrop-filter: saturate(160%) blur(20px);
+}
+.cartoon img{
+  width: 150px;
+}
+
+
