@@ -13,3 +13,10 @@ export async function getCandies(){
     .select('*');
   return response.body;
 }
+
+export async function getSpiders(){
+  const response = await client
+    .from('spiders')
+    .select('*');
+  return response.body;
+}
