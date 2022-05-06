@@ -20,3 +20,9 @@ export async function getSpiders(){
     .select('*');
   return response.body;
 }
+export async function getCartoons(){
+  const response = await client
+    .from('cartoons')
+    .select('*');
+  return response.body;
+}
