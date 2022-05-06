@@ -7,3 +7,9 @@ export async function getBears(){
   return response.body;
 }
 
+export async function getCandies(){
+  const response = await client
+    .from('candies')
+    .select('*');
+  return response.body;
+}

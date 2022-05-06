@@ -40,14 +40,29 @@
 .bear-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 20px;
 }
 .bear {
   border: 1px solid black;
   padding: 10px;
   margin: 10px;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 200px;
   
+}
+.candy-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.candy {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  justify-content: space-around;
+  width: 200px;
+
 }
