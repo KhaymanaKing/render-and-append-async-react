@@ -1,0 +1,28 @@
+import { client } from '../client';
+
+export async function getBears(){
+  const response = await client
+    .from ('bears')
+    .select('*');
+  return response.body;
+}
+
+export async function getCandies(){
+  const response = await client
+    .from('candies')
+    .select('*');
+  return response.body;
+}
+
+export async function getSpiders(){
+  const response = await client
+    .from('spiders')
+    .select('*');
+  return response.body;
+}
+export async function getCartoons(){
+  const response = await client
+    .from('cartoons')
+    .select('*');
+  return response.body;
+}
