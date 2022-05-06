@@ -10,7 +10,7 @@ function App() {
   const [bears, setBears] = useState([]);
   const [candies, setCandies] = useState([]);
   const [spiders, setSpiders] = useState([]);
-  const [cartoons, setCarttons] = useState([]);
+  const [cartoons, setCartoons] = useState([]);
 
   useEffect(async () => {
     const bearResponse = await getBears();
@@ -21,6 +21,7 @@ function App() {
     setBears(bearResponse);
     setCandies(candyResponse);
     setSpiders(spiderResponse);
+    setCartoons(cartoonRespone); 
   }, []);
 
   return (
